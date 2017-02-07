@@ -1,0 +1,62 @@
+/*========================================================
+                     List styles
+=========================================================*/
+
+
+/*===============     Inline List    =====================*/
+.inline-list {
+  display: inline-block;
+  @include clearfix();
+  > li {
+    float: left;
+  }
+
+
+  &.social-list {
+    li {
+      > a {
+        @each $social in vk, facebook, twitter, odnoklassniki {
+          $i: $i + 1;
+          &.fa-#{$social} {
+            background: (nth($social-clrs, $i));
+            color: $black;
+          }
+        }
+      }
+      &:hover {
+        > a {
+          @each $social in vk, facebook, twitter, odnoklassniki {
+            $i: $i + 1;
+            &.fa-#{$social} {
+              background: $danger-color;
+              color: $white;
+            }
+          }
+        }
+      }
+      & + li {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+/*=================  Marked List   =====================*/
+.marked-list {
+  > li {
+    position: relative;
+    display: block;
+    &:before {
+      position: absolute;
+      content: '';
+    }
+  }
+}
+
+/*==================  Item List   ========================*/
+.item-list {
+  display: block;
+  > li {
+    display: block;
+  }
+}

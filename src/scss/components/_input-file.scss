@@ -1,0 +1,93 @@
+
+// default style
+$form--upload-fs: 14px;
+$form--upload-lh: 20px;
+$form--upload-width: 100%;
+$form--upload-height: 100%;
+$form--upload-border: 1px;
+$form--upload-border-radius: 4px;
+$form--upload-border-color: $black;
+$form--upload-border-style: solid;
+$form--upload-background-color: $white;
+
+.upload-wrap {
+  position: relative;
+  width: $form--upload-width;
+  height: $form--upload-height;
+  border: $form--upload-border $form--upload-border-style $form--upload-border-color;
+  padding: 10px;
+  background: red;
+
+
+  vertical-align: middle;
+  overflow: hidden;
+  cursor: pointer;
+  @include clearfix();
+
+  #upload-label{
+    float: left;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+}
+
+
+
+
+
+
+//.fileform {
+//  background-color: $form--upload-background-color;
+//  border: $form--upload-border solid $form--upload-border-color;
+//  border-radius: $form--upload-border-radius;
+//  cursor: pointer;
+//  overflow: hidden;
+//  padding: 2px;
+//  position: relative;
+//  text-align: left;
+//  vertical-align: middle;
+//  height: 26px;
+//  width: 230px;
+//}
+
+//.fileform #fileformlabel {
+//  background-color: $form--upload-background-color;
+  //float: left;
+  //height: 22px;
+  //line-height: 22px;
+  // //padding: 2px;
+//  overflow: hidden;
+//  text-align: left;
+//  vertical-align: middle;
+//  width: $form--upload-width;
+//}
+
+
+//.fileform .selectbutton {
+//  background-color: #A2A3A3;
+//  border: 1px solid #939494;
+//  border-radius: 2px;
+//  color: #FFFFFF;
+//  float: right;
+//  font-size: 16px;
+//  height: 20px;
+//  line-height: 20px;
+//  overflow: hidden;
+//  padding: 2px 6px;
+//  text-align: center;
+//  vertical-align: middle;
+  //width: 50px;
+//}
+
+//.fileform #upload{
+//  position:absolute;
+//  top:0;
+//  left:0;
+//  width:100%;
+//  -moz-opacity: 0;
+//  filter: alpha(opacity=0);
+//  opacity: 0;
+//  font-size: 150px;
+//  height: 30px;
+//  z-index:20;
+//}

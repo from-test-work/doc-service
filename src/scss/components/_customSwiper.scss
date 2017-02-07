@@ -1,0 +1,94 @@
+.swiper-container.first-swiper-container,
+.swiper-container.second-swiper-container{
+  .swiper-wrapper {
+    .swiper-slide {
+      .backgroundshadow{
+        margin: 5px 0 15px;
+      }
+    }
+  }
+}
+
+
+.first-swiper-container {
+  .background1, .background2 {
+    @include box-shadow(0px 3px 30px 0px rgba(234, 236, 238, 1));
+    //@include box-shadow(0px 3px 30px 0px rgba(255, 7, 7, 0.75));
+  }
+  .background1 {
+    background: url("../images/background1.jpg") 0 0 no-repeat;
+    background-size: cover;
+  }
+  .background2 {
+    background: url("../images/background2.jpg") 0 0 no-repeat;
+    background-size: cover;
+  }
+
+  .slide1 {
+    padding: 100px 0;
+    .h1 {
+      color: $default;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: $default-font;
+    }
+    .textreg {
+      margin-top: 55px;
+      color: $default;
+      font: 300 30px/1 $default-font;
+    }
+    .btn-group {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      > .btn1 {
+        width: auto;
+        @include border-radius(0);
+        &:first-child {
+          border-top-left-radius: 6px;
+          border-bottom-left-radius: 6px;
+        }
+        &:last-child {
+          border-top-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+        }
+      }
+    }
+  }
+
+}
+
+
+.second-swiper-container {
+  .background1, .background2 {
+
+    @include box-shadow(0px 3px 30px 0px rgba(234, 236, 238, 1));
+    //@include box-shadow(0px 3px 30px 0px rgba(255, 7, 7, 0.75));
+  }
+  .background1 {
+    background: url("../images/background1.jpg") 0 0 no-repeat;
+    background-size: cover;
+  }
+  .background2 {
+    background: url("../images/background2.jpg") 0 0 no-repeat;
+    background-size: cover;
+  }
+
+  .slide1 {
+    padding: 70px 0;
+    .h1 {
+      color: $default;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: $default-font;
+    }
+    .textreg {
+      color: $default;
+      font: 300 24px/1.2 $default-font;
+    }
+    .btn-wrap {
+      margin-top: 50px;
+      width: 235px;
+    }
+  }
+}

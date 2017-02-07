@@ -1,0 +1,145 @@
+//=============================    Buttons    ==========================================================================
+.btn1 {
+  display: inline-block;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  position: relative;
+  background: none;
+  color: transparent;
+  width: 100%;
+  @include transition(0.3s ease all);
+  @include border-radius(6px);
+  z-index: 1;
+  &:hover,
+  &:active {
+    color: $black;
+  }
+  //&:active {
+  //  box-shadow: inset 0 3px 10px 0 rgba(50, 50, 50, 0.65);
+  //}
+}
+
+.btn-style1 {
+  text-transform: uppercase;
+  border: 1px solid $success-color;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9dd53a+0,37d3a7+0,3ad5aa+25,34d0a4+50,2bca9e+75,37d3a7+100 */
+  background: $success-color; /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(19,179,134,1) 0%,  rgba(51,208,164,1) 50%,  rgba(19,179,134,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,rgba(19,179,134,1) 0%,  rgba(51,208,164,1) 50%,  rgba(19,179,134,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(19,179,134,1) 0%,  rgba(51,208,164,1) 50%,  rgba(19,179,134,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#37d3a7',GradientType=0 ); /* IE6-9 */
+  color: $white;
+  font: 700 12px/1 $default-font;
+  padding: calc((50px - 12px - 2px - 2px) / 2) 15px;
+  //text-shadow: 0 2px 0 #333e50;
+  text-shadow: 1px 1px 0 #333e50;
+  box-shadow: 0 2px 2px 0 darken(saturate(adjust-hue($success-color, 0.1485), 12.9864), 19.4118);
+  &:after {
+    background: $white;
+
+  }
+  &:hover{
+    border: 1px solid transparent;
+    color: $success-color;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-style2 {
+  border: 1px solid #f0efef;
+  background: #f0efef;
+  color: $black;
+  font: 300 12px/1 $default-font;
+  padding: calc((50px - 12px - 2px) / 2) 25px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 2px 0 lighten(desaturate(adjust-hue($default, -217.2414), 22.1374), 56.2745);
+  span{
+    border-bottom: 1px dashed $black;
+  }
+  &:after {
+    background: $success-color;
+  }
+  &:hover{
+    color: $white;
+    border: 1px solid $success-color;
+    box-shadow: 0 2px 2px 0 darken(saturate(adjust-hue($success-color, 0.1485), 12.9864), 19.4118);
+    span{
+      border-bottom: 1px dashed $white;
+    }
+  }
+}
+
+.btn-effect1 {
+  overflow: hidden;
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+  &:after {
+    width: 0;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    @include transform(translateX(-50%) translateY(-50%));
+    @include transition(0.3s ease all);
+  }
+
+  &:hover {
+    &:after {
+      width: 103%;
+      opacity: 1;
+    }
+  }
+}
+
+
+.signin,
+.registration{
+  position: relative;
+  padding-left: 25px;
+  &:before{
+    position: absolute;
+    font: 400 14px/1 $fa;
+    color: $success-color;
+    top: 50%;
+    left: 10px;
+    @include transform(translateY(-50%));
+  }
+  &:hover{
+    &:before{
+      color: $white;
+    }
+  }
+}
+
+.signin{
+  &:before{
+    content: '\f023';
+  }
+}
+
+.registration{
+  &:before{
+    content: '\f007';
+  }
+}
+

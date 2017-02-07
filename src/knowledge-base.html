@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    //= templates/meta-link.html
+    <title>Aleba Webmaster</title>
+</head>
+<body>
+<div class="page">
+    <!--============================ HEADER =============================-->
+    //= templates/MobileMenu.html
+    //= templates/header.html
+    <!--============================  MAIN  =============================-->
+    <main>
+        <!--Breadcrumb-->
+        <section class="well__breadcrumb">
+            <div class="container">
+                <!--Навигация-->
+                <ul xmlns:v="http://rdf.data-vocabulary.org/#" class="breadcrumbs">
+                    <li typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="index.html">Главная</a></li>
+                    <li typeof="v:Breadcrumb" class="active">
+                        База знаний
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="container well-5">
+                <h2>База знаний</h2>
+
+                <!-- Интерактивный поиск, тоесть при вводе какого угодно символа в поле поиска, из списка идет выборка
+                     по этим символам
+                 -->
+
+
+                <div class="form-group placeholder-effect2 placeholder-overflow  offs-4">
+                    <label class="search-submit search-before__left">
+                        <input type="search" placeholder="search input" class="form-input search form-control">
+                    </label>
+                </div>
+
+
+
+
+
+                <!--<div class="form-group placeholder-effect2 placeholder-overflow offs-4">-->
+                    <!--<label class="search-submit search-submit__left">-->
+                        <!--<input type="search" placeholder="search input" class="form-input search form-control">-->
+                        <!--<input type="submit" value=""/>-->
+                    <!--</label>-->
+                <!--</div>-->
+
+                <ul class="results db-list">
+                    <li><a href="">Мы сделали редизайн страницы «Мои вакансии»</a></li>
+                    <li><a href="">10 самых популярных курсов «Академии»</a></li>
+                    <li><a href="">Собеседование: инструкция для тех, кто нанимает в первый раз</a></li>
+                    <li><a href="">Лидер и руководитель: в чем разница?</a></li>
+                    <li><a href="">Идеальный соискатель: 9 примеров от компаний-работодателей</a></li>
+                    <li><a href="">Обучение по-взрослому: 14 полезных советов от HeadHunter, часть 2</a></li>
+                    <li><a href="">Внимание, Новогодний конкурс для рекрутеров от HRspace!</a></li>
+                    <li><a href="">Как найти сотрудника, если вы не HR</a></li>
+                    <li><a href="">Лучше, чем повышение: что такое горизонтальный и вертикальный типы карьеры</a></li>
+                    <li><a href="">Пять фактов, о которых лучше промолчать на собеседовании</a></li>
+                    <li><a href="">Тест: кем ты станешь в мире программистов?</a></li>
+                    <li><a href="">Когда и как просить повышения заработной платы</a></li>
+                    <li><a href="">5 способов управлять ДМС — и сделать сотрудников счастливее</a></li>
+                    <li><a href="">Обучение по-взрослому: 14 полезных советов от HeadHunter, часть 1</a></li>
+                    <li><a href="">Как организовать идеальное рабочее пространство</a></li>
+                    <li><a href="">Брендированные страницы привлекают больше мотивированных кандидатов</a></li>
+                    <li><a href="">Самые высокие зарплаты ноября</a></li>
+                    <li><a href="">40 интересных вакансий в ИТ</a></li>
+                    <li><a href="">9 ключевых шагов к построению сильного HR-бренда в ритейле</a></li>
+                    <li><a href="">5 миллионов пользователей смотрят вакансии из приложения</a></li>
+                </ul>
+
+                //= templates/pagination.html
+            </div>
+
+        </section>
+    </main>
+    <!--============================ FOOTER =============================-->
+    //= templates/footer.html
+</div>
+
+<!--coded by Alex B.-->
+</body>
+</html>
+<!--Links-->
+<link rel="stylesheet" href="css/rd-navbar.css">
+<link rel="stylesheet" href="css/styles.css">
+<!--JS-->
+<script type="text/javascript" src="js/core.js"></script>
+<script type="text/javascript" src="js/components.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+
+<!--<h4 style="font-size: 30px;text-align: center;font-family: 'Ubuntu', sans-serif;color: #333e50;font-weight: 700; ">Для ИП</h4>-->
+<!--     @include box-shadow(0px 3px 30px 0px rgba(255, 7, 7, 0.75));   -->

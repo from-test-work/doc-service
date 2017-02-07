@@ -1,0 +1,71 @@
+/*========================================================
+                     Breadcrumbs
+=========================================================*/
+$breadcrumbs--font-size: 12px;
+$breadcrumbs--font-weight: 300;
+$breadcrumbs--font-family: $default-font;
+$breadcrumbs--line-height: 21px;
+$breadcrumbs--color: $default;
+$breadcrumbs--color__active: $success-color;
+$breadcrumbs--offset: 10px;
+$breadcrumbs--delimiter: 'content';
+// content | triangle | icon
+
+.breadcrumbs {
+  display: block;
+  line-height: $breadcrumbs--line-height;
+  //margin-top: 20px;
+  @include clearfix();
+  li {
+    float: left;
+    position: relative;
+    display: inline-block;
+    font-size: $breadcrumbs--font-size;
+    font-weight: $breadcrumbs--font-weight;
+    line-height: $breadcrumbs--line-height;
+    font-family: $breadcrumbs--font-family;
+    a {
+      text-decoration: underline;
+      font-size: $breadcrumbs--font-size;
+      font-weight: $breadcrumbs--font-weight;
+      line-height: $breadcrumbs--line-height;
+      font-family: $breadcrumbs--font-family;
+      color: lighten(desaturate(adjust-hue($breadcrumbs--color, -217.2414), 22.1374), 24.5098);
+    }
+    &.active {
+      color: $breadcrumbs--color__active;
+      text-decoration: none;
+    }
+    &:before {
+      position: absolute;
+      @if ($breadcrumbs--delimiter=='content') {
+        content: '/';
+        left: calc((-#{$breadcrumbs--offset} / 2) - 2px);
+        color: lighten(desaturate(adjust-hue($breadcrumbs--color, -217.2414), 22.1374), 24.5098);
+      } @else if ($breadcrumbs--delimiter=='triangle') {
+        content: '';
+        top: 50%;
+        left: calc((-#{$breadcrumbs--offset} / 2) - (6px / 2));
+        @include triangle(right, 4px, 6px, $primary);
+        @include transform(translateY(-50%));
+      }
+    }
+    &:last-child:before {
+      color: $default;
+    }
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+    + li {
+      margin-left: $breadcrumbs--offset;
+    }
+  }
+}
+
+@media(max-width: 991px){
+  .breadcrumbs {
+    margin-top: 20px;
+  }
+}
